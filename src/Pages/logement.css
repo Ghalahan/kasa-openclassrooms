@@ -1,0 +1,84 @@
+.logement-container {
+    width: 100%;
+  }
+
+  
+  .logo {
+    width: 150px;
+  }
+  
+  .nav{
+    font-weight: 500;
+    font-size: larger;
+  }
+
+  .nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .nav .a-propos-link{
+    text-decoration: underline;
+  }
+  
+  .banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px 80px;
+    height: 400px; 
+}
+  
+  
+  .background-image {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 30px;
+  }
+
+  .logement{
+    display: flex;
+    gap: 25px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logement-card{
+    background-color: #FF6B6B;
+    color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+  }
+
+  .logement-section{
+    display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin: 50px 80px;
+  padding: 50px;
+  border-radius: 30px;
+  }
+
+  .collapse_logement{
+    background-color: #FF6B6B;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    width: 600px;
+  }
+  .collapse_title .collapse_logement h2{
+    color: black;
+  }

@@ -1,0 +1,28 @@
+.error-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    text-align: center;
+    color: #FF6B6B;
+}
+
+.error_404 {
+    font-size: 120px;
+}
+
+.error-message {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.home-link {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 100px;
+    color: black;
+}
