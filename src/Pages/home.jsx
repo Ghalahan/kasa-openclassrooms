@@ -1,4 +1,6 @@
 import './home.css';
+import rentalList from '../Data/logements.json'
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -12,27 +14,15 @@ function Home() {
       </section>
 
       <section class="location-grid">
-          <div class="location-card">
-                  <div class="background_logement">
-                      <a href='/logement'><img src="/images/background_logement.png" alt="Cozy Loft"></img></a>
-                  </div>
-              <h2 class="location-title">Titre de la location</h2>
-          </div>
-          <div class="location-card">
-            <h2>Titre de la location</h2>
-          </div>
-          <div class="location-card">
-            <h2>Titre de la location</h2>
-          </div>
-          <div class="location-card">
-            <h2>Titre de la location</h2>
-          </div>
-          <div class="location-card">
-            <h2>Titre de la location</h2>
-          </div>
-          <div class="location-card">
-            <h2>Titre de la location</h2>
-          </div>
+
+      {rentalList.map((rental) => (
+          <Link to={`/Logement/${rental.id}`} key={rental.id}>
+            <div class="location-card" style={{backgroundImage: `url(${rental.cover})`}}>
+              <h2 class="location-title">{rental.title}</h2>
+            </div>
+          </Link>
+      ))}
+          
         </section>
 
     </div>

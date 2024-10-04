@@ -21,8 +21,7 @@ function App() {
       <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/Home" element={<Home />} />
-            {/*Exemple de Route pour Rental et Rental ID <Route path="/logement/:rentalId" element={<Rental />} /> */}
-            <Route exact path="/Logement" element={<Logement />} />
+            <Route path="/Logement/:rentalId" element={<Logement />} />
             <Route exact path="/A-Propos" element={<APropos />} />
             <Route path="*" element={<Error />} />
       </Routes>

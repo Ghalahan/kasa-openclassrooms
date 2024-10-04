@@ -82,3 +82,66 @@
   .collapse_title .collapse_logement h2{
     color: black;
   }
+
+  .listing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.title-location {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #FF6A6A;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: grey;
+    margin: 5px 0;
+}
+
+.tags {
+    margin-top: 5px;
+}
+
+.tag {
+    background-color: #FF6A6A;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.author-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.author {
+    color: #FF6A6A;
+    text-align: right;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    font-size: 1.5rem;
+    color: lightgray;
+}
+
+.star.filled {
+    color: #FF6A6A;
+}
