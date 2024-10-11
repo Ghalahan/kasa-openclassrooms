@@ -1,14 +1,21 @@
 // Import React and useState
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Import image for arrow icon
 import expandArrow from '../Assets/expand_arrow.png';
 
 function Collapse({ title, text, className }) {
   const [open, setOpen] = useState(false);
+  const [height, setHeight] = useState('0px');
+  const contentRef = useRef(null);
+
   const toggle = () => {
     setOpen(!open);
   };
+
+  useEffect(() => {
+    setHeight(open ? `${contentRef.current.scrollHeight}px` : '0px');
+  }, [open]);
 
   return (
     <div className={`${className} ${open ? 'open' : ''}`}>
@@ -20,7 +27,13 @@ function Collapse({ title, text, className }) {
           alt="Cliquez-ici pour dérouler le texte"
         />
       </button>
-      {open && <div className="collapse__text">{text}</div>}
+      <div
+        ref={contentRef}
+        style={{ height, overflow: 'hidden', transition: 'height 0.3s ease' }}
+        className="collapse__text"
+      >
+        {text}
+      </div>
     </div>
   );
 }

@@ -66,9 +66,7 @@ border-radius: 30px;
 }
 
 .collapse__text{
-  padding-bottom: 15px;
   padding-left: 15px;
-  padding-top: 15px;
   transition: height 0.3s ease-in-out;
   height: 0px;
 }
