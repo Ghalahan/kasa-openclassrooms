@@ -69,11 +69,14 @@ border-radius: 30px;
   padding-left: 15px;
   transition: height 0.3s ease-in-out;
   height: 0px;
+  line-height: 0px;
 }
 
 
 .collapse.open .collapse__text {
   height: 50px;
+  padding: 10px;
+  line-height: inherit;
 }
 
 

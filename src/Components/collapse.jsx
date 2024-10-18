@@ -14,7 +14,7 @@ function Collapse({ title, text, className }) {
   };
 
   useEffect(() => {
-    setHeight(open ? `${contentRef.current.scrollHeight}px` : '0px');
+    setHeight(open ? `inherit`:'0px');
   }, [open]);
 
   return (
