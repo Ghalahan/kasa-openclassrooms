@@ -13,12 +13,12 @@ function Home() {
         <h1>Chez vous, partout et ailleurs</h1>
       </section>
 
-      <section class="location-grid">
+      <section className="location-grid">
 
       {rentalList.map((rental) => (
           <Link to={`/Logement/${rental.id}`} key={rental.id}>
-            <div class="location-card" style={{backgroundImage: `url(${rental.cover})`}}>
-              <h2 class="location-title">{rental.title}</h2>
+            <div className="location-card" style={{backgroundImage: `url(${rental.cover})`}}>
+              <h2 className="location-title">{rental.title}</h2>
             </div>
           </Link>
       ))}
