@@ -69,37 +69,42 @@ function Logement() {
       </section>
 
       <section className="listing">
-        <div className="title-location-tags-rating">
-          <div className="title-author">
-            <div className="title-location">
-              <h2>{rental.title}</h2>
-              <h3>{rental.location}</h3>
-            </div>
+  <div className="title-location-tags-rating">
+    
+    <div className="title-author">
+      <div className="title-location">
+        <h2>{rental.title}</h2>
+        <h3>{rental.location}</h3>
+      </div>
 
-            <div className="author-info">
-              <span className="author">
-                {rental.host.name.split(' ')[0]}<br />
-                {rental.host.name.split(' ')[1]}
-              </span>
-              <img className="host-picture" src={rental.host.picture} alt={rental.host.name} />
-            </div>
-          </div>
-
-          <div className="tags-rating">
-            <div className="tags">
-              {rental.tags.map((tag, index) => (
-                <span className="tag" key={index}>{tag}</span>
-              ))}
-            </div>
-
-            <div className="rating">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className={`star ${i < rental.rating ? 'filled' : ''}`}>★</span>
-              ))}
-            </div>
-          </div>
+      <div className="tags-rating">
+        <div className="tags">
+          {rental.tags.map((tag, index) => (
+            <span className="tag" key={index}>{tag}</span>
+          ))}
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div className="rating-author">
+      <div className="rating">
+        {[...Array(5)].map((_, i) => (
+          <span key={i} className={`star ${i < rental.rating ? 'filled' : ''}`}>★</span>
+        ))}
+      </div>
+
+      <div className="author-info">
+        <span className="author">
+          {rental.host.name.split(' ')[0]}<br />
+          {rental.host.name.split(' ')[1]}
+        </span>
+        <img className="host-picture" src={rental.host.picture} alt={rental.host.name} />
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       <section className="logement-section">
         <Collapse className="collapse" title="Description" text={rental.description} />

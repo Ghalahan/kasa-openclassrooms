@@ -29,3 +29,29 @@
   margin: 0;
   font-size: 14px;
 }
+
+@media (max-width: 768px) {
+  
+  .logo {
+    width: 200px; 
+    margin-left: 10px;
+  }
+
+  .header{
+        padding: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        gap: 10px;
+        margin: 10px;
+  }
+
+  
+  .nav a {
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+
+  .footer{
+    padding: 120px 0px;
+  }
+}
