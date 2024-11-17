@@ -246,6 +246,10 @@ h3 {
   color: white;
 }
 
+.collapse-list{
+  list-style: none;
+}
+
 @media (max-width: 768px) {
 
   .listing {

@@ -108,7 +108,7 @@ function Logement() {
 
       <section className="logement-section">
         <Collapse className="collapse" title="Description" text={rental.description} />
-        <Collapse className="collapse" title="Équipement" text={rental.equipments.join(', ')} />
+        <Collapse className="collapse" title="Équipement" text={rental.equipments} />
       </section>
     </div>
   );

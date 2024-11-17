@@ -32,7 +32,7 @@ function Collapse({ title, text, className }) {
         style={{ height, overflow: 'hidden', transition: 'height 0.3s ease' }}
         className="collapse__text"
       >
-        {text}
+        {Array.isArray(text)?<ul>{text.map(content=><li className='collapse-list' key={content}>{content}</li>)}</ul>:text} 
       </div>
     </div>
   );
